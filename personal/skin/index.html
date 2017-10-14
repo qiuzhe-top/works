@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="top-balist">
+        <ul>
+            <li>
+                <img src="images/1-1.jpg" bigsrc="images/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/2-2.jpg" bigsrc="images/2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/3-3.jpg" bigsrc="images/3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/4-4.jpg" bigsrc="images/4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/5-5.jpg" bigsrc="images/5.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/6-6.jpg" bigsrc="images/6.jpg" alt="">
+                
+            </li>
+            <li>
+                    <img src="images/7-7.jpg" bigsrc="images/7.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/8-8.jpg" bigsrc="images/8.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <div id="bth"></div>
+    <script src="js/jquery.js"></script>
+    <script>
+    $("#bth").click(function(){
+        $("#top-balist").slideToggle();
+    });
+    
+    $("#top-balist ul li").click(function(){
+         var src = $(this).find("img").attr("bigsrc");
+         $("body").css({
+             "background-image":"url("+src+")"
+             
+         });
+    });
+  
+    </script>
+</body>
+</html>
